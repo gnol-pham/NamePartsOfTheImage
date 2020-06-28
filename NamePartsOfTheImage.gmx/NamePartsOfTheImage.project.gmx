@@ -7,22 +7,45 @@
     <extension index="0">extensions\playsound</extension>
   </NewExtensions>
   <sounds name="sound">
-    <sound>sound\sound0</sound>
+    <sound>sound\ss_put_leaf</sound>
+    <sound>sound\ss_put_root</sound>
+    <sound>sound\ss_put_stem</sound>
+    <sound>sound\ss_put_flower</sound>
+    <sound>sound\ss_put_fruit</sound>
+    <sound>sound\ss_correct_leaf</sound>
+    <sound>sound\ss_correct_root</sound>
+    <sound>sound\ss_correct_stem</sound>
+    <sound>sound\ss_correct_flower</sound>
+    <sound>sound\ss_correct_fruit</sound>
+    <sound>sound\ss_wrong</sound>
+    <sound>sound\ss_end</sound>
+    <sound>sound\ss_menu</sound>
+    <sound>sound\ss_game</sound>
+    <sound>sound\ss_tree_1</sound>
+    <sound>sound\ss_tree_2</sound>
+    <sound>sound\ss_tree_3</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_leaf</sprite>
     <sprite>sprites\s_root</sprite>
     <sprite>sprites\s_stem</sprite>
     <sprite>sprites\s_flower</sprite>
-    <sprite>sprites\sprite4</sprite>
+    <sprite>sprites\s_fruit</sprite>
     <sprite>sprites\s_leaf_box</sprite>
     <sprite>sprites\s_root_box</sprite>
     <sprite>sprites\s_stem_box</sprite>
     <sprite>sprites\s_flower_box</sprite>
     <sprite>sprites\s_fruit_box</sprite>
-    <sprite>sprites\sprite10</sprite>
+    <sprite>sprites\s_start_button</sprite>
+    <sprite>sprites\s_tree</sprite>
+    <sprite>sprites\s_speaker</sprite>
+    <sprite>sprites\s_bubble</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_garden</background>
+    <background>background\bg_end</background>
+    <background>background\bg_menu</background>
+  </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\o_leaf</object>
@@ -36,11 +59,16 @@
     <object>objects\o_stem_box</object>
     <object>objects\o_flower_box</object>
     <object>objects\o_fruit_box</object>
-    <object>objects\object11</object>
+    <object>objects\o_start_button</object>
+    <object>objects\o_tree</object>
+    <object>objects\o_end</object>
+    <object>objects\o_speaker</object>
+    <object>objects\o_bubble</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
-    <room>rooms\room0</room>
+    <room>rooms\r_menu</room>
+    <room>rooms\r_game</room>
+    <room>rooms\r_end</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

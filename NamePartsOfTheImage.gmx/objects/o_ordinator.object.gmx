@@ -25,36 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>part = ds_list_create();
+            <string>//globalvar call_next_part;
+//call_next_part = 1;
+part = ds_list_create();
 for (var i = 0; i &lt; 5; i++) {
    part[| i] = i;
 }
 ds_list_shuffle(part);
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>call_next_part</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -84,6 +62,26 @@ ds_list_shuffle(part);
       </action>
       <action>
         <libid>1</libid>
+        <id>212</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_end_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>ss_menu</sound>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>211</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -98,7 +96,7 @@ ds_list_shuffle(part);
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>sound0</sound>
+            <sound>ss_game</sound>
           </argument>
           <argument>
             <kind>3</kind>
@@ -108,18 +106,22 @@ ds_list_shuffle(part);
       </action>
       <action>
         <libid>1</libid>
-        <id>701</id>
-        <kind>0</kind>
+        <id>611</id>
+        <kind>6</kind>
         <userelative>-1</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_score</functionname>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>wait</string>
+          </argument>
           <argument>
             <kind>0</kind>
             <string>0</string>
@@ -128,6 +130,77 @@ ds_list_shuffle(part);
       </action>
     </event>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+if (part[| 0] == 0)
+{    
+    if (o_leaf.check_leaf == 1)
+    {   
+        audio_play_sound(ss_correct_leaf, 1, false);
+        o_leaf.check_leaf = 0;
+        progress ++;
+        ds_list_delete(o_ordinator.part, 0);
+    }
+}
+else if (part[| 0] == 1)
+{  
+    if (o_root.check_root == 1)
+    {
+        audio_play_sound(ss_correct_root, 1, false);
+        o_root.check_root = 0;
+        progress ++;
+        ds_list_delete(o_ordinator.part, 0);
+    }
+}
+else if (part[| 0] == 2)
+{  
+    if (o_stem.check_stem == 1)
+    {
+        audio_play_sound(ss_correct_stem, 1, false);
+        o_stem.check_stem = 0;
+        progress ++;
+        ds_list_delete(o_ordinator.part, 0);
+    }
+}
+else if (part[| 0] == 3)
+{    
+    if (o_flower.check_flower == 1)
+    {
+        audio_play_sound(ss_correct_flower, 1, false);
+        o_flower.check_flower = 0;
+        progress ++;
+        ds_list_delete(o_ordinator.part, 0);
+    }
+}
+else if (part[| 0] == 4)
+{    
+    if (o_fruit.check_fruit == 1)
+    {
+        audio_play_sound(ss_correct_fruit, 1, false);
+        o_fruit.check_fruit = 0;
+        progress ++;
+        ds_list_delete(o_ordinator.part, 0);
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>612</id>
@@ -144,11 +217,11 @@ ds_list_shuffle(part);
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>call_next_part</string>
+            <string>progress</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>1</string>
+            <string>5</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -186,86 +259,11 @@ ds_list_shuffle(part);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>call_next_part</string>
+            <string>wait</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (part[|0] == 0)
-{    
-    score = part[|0];
-    if (o_leaf.check_leaf == 1)
-    {
-        o_leaf.check_leaf = 0;
-        progres ++;
-        ds_list_delete(part,1);
-        call_next_part = 1;
-    }
-}
-if (part[|0] == 1)
-{ 
-    score = part[|0];   
-    if (o_root.check_root == 1)
-    {
-        o_root.check_root = 0;
-        progres ++;
-        ds_list_delete(part,0);
-        call_next_part = 1;
-    }
-}
-if (part[|0] == 2)
-{   
-    score = part[|0]; 
-    if (o_stem.check_stem == 1)
-    {
-        o_stem.check_stem = 0;
-        progres ++;
-        ds_list_delete(part,0);
-        call_next_part = 1;
-    }
-}
-if (part[|0] == 3)
-{    
-    score = part[|0];
-    if (o_flower.check_flower == 1)
-    {
-        o_flower.check_flower = 0;
-        progres ++;
-        ds_list_delete(part,0);
-        call_next_part = 1;
-    }
-}
-if (part[|0] == 4)
-{    
-    score = part[|0];
-    if (o_fruit.check_fruit == 1)
-    {
-        o_fruit.check_fruit = 0;
-        progres ++;
-        ds_list_delete(part,0);
-        call_next_part = 1;
-    }
-}
-</string>
+            <string>wait + 1</string>
           </argument>
         </arguments>
       </action>
@@ -299,11 +297,11 @@ if (part[|0] == 4)
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>progress</string>
+            <string>wait</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>5</string>
+            <string>180</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -357,13 +355,13 @@ if (part[|0] == 4)
     <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
-        <id>703</id>
+        <id>613</id>
         <kind>0</kind>
         <userelative>-1</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
+        <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_draw_score</functionname>
+        <functionname>action_draw_variable</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
@@ -371,15 +369,43 @@ if (part[|0] == 4)
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>11</string>
+            <string>part[| 0]</string>
           </argument>
           <argument>
             <kind>0</kind>
             <string>11</string>
           </argument>
           <argument>
-            <kind>1</kind>
-            <string>part: </string>
+            <kind>0</kind>
+            <string>11</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>613</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>progress</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
