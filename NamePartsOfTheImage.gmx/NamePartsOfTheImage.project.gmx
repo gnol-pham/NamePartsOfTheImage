@@ -40,6 +40,10 @@
     <sprite>sprites\s_tree</sprite>
     <sprite>sprites\s_speaker</sprite>
     <sprite>sprites\s_bubble</sprite>
+    <sprite>sprites\s_quit_button</sprite>
+    <sprite>sprites\s_back_button</sprite>
+    <sprite>sprites\s_restart_button</sprite>
+    <sprite>sprites\s_title</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_garden</background>
@@ -64,6 +68,10 @@
     <object>objects\o_end</object>
     <object>objects\o_speaker</object>
     <object>objects\o_bubble</object>
+    <object>objects\o_quit_button</object>
+    <object>objects\o_back</object>
+    <object>objects\o_restart_button</object>
+    <object>objects\o_title</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_menu</room>
