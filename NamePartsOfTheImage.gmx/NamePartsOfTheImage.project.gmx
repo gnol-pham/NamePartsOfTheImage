@@ -44,6 +44,11 @@
     <sprite>sprites\s_back_button</sprite>
     <sprite>sprites\s_restart_button</sprite>
     <sprite>sprites\s_title</sprite>
+    <sprite>sprites\s_leaf_blink</sprite>
+    <sprite>sprites\s_flower_blink</sprite>
+    <sprite>sprites\s_fruit_blink</sprite>
+    <sprite>sprites\s_root_blink</sprite>
+    <sprite>sprites\s_stem_blink</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_garden</background>
@@ -72,6 +77,11 @@
     <object>objects\o_back</object>
     <object>objects\o_restart_button</object>
     <object>objects\o_title</object>
+    <object>objects\o_stem_blink</object>
+    <object>objects\o_leaf_blink</object>
+    <object>objects\o_flower_blink</object>
+    <object>objects\o_fruit_blink</object>
+    <object>objects\o_root_blink</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_menu</room>

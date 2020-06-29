@@ -75,7 +75,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (grab == 1)
+            <string>if (grab == 1) //di chuyển theo chuột
 {
     x = mouse_x;
     y = mouse_y;
@@ -85,38 +85,12 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="o_stem_box">
-      <action>
-        <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>check_stem</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="6" enumb="7">
       <action>
         <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
@@ -128,11 +102,35 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>grab</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
+            <string>if (place_meeting(x, y, o_stem_box)){
+    check_stem = 1;
+    grab = 0;
+    with (o_stem_blink){
+        instance_destroy();
+    }
+    //move_towards_point(o_leaf_box.x, o_leaf_box.y, 5);
+    action_move_to(o_stem_box.x, o_stem_box.y);
+    //if (distance_to_object(o_leaf_box) &gt; 0){
+    //    direction = point_direction(x, y, o_leaf_box.x, o_leaf_box.y);
+    //   speed = 5;
+    //}
+    //else {
+    //    speed = 0;
+    //}
+}
+else {
+    grab = 0;
+    //move_towards_point(128, 48, 10);
+    action_move_to(448, 64);
+   //if (distance_to_point(112, 48) &gt; 0){
+    //    direction = point_direction(x, y, 112, 48);
+    //    speed = 5;
+   // }
+   // else {
+    //    speed = 0;
+   // }
+}
+</string>
           </argument>
         </arguments>
       </action>

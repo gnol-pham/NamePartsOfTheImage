@@ -75,14 +75,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (grab == 1)
+            <string>if (grab == 1) //di chuyển theo chuột
 {
     x = mouse_x;
     y = mouse_y;
 }
-if( x == 128 || (x == o_leaf_box.x &amp;&amp; y == o_leaf_box.y)){
+if (point_distance(x, y, o_leaf_box.x, o_leaf_box.y) &lt; 2 
+        || point_distance(x, y, 128, 64) &lt; 2){
     speed = 0;
 }
+
 </string>
           </argument>
         </arguments>
@@ -108,13 +110,18 @@ if( x == 128 || (x == o_leaf_box.x &amp;&amp; y == o_leaf_box.y)){
             <string>if (place_meeting(x, y, o_leaf_box)){
     check_leaf = 1;
     grab = 0;
-    //move_towards_point(o_leaf_box.x, o_leaf_box.y, 5);
-    action_move_to(o_leaf_box.x, o_leaf_box.y);
+    with (o_leaf_blink){
+        instance_destroy();
+    }
+    //action_move_to(o_leaf_box.x, o_leaf_box.y);
+    direction = point_direction(x, y, o_leaf_box.x, o_leaf_box.y);
+    speed = 5;
 }
-else if(check_leaf == 0){
+else {
     grab = 0;
-    //move_towards_point(128, 48, 10);
-    action_move_to(128, 48);
+    //action_move_to(128, 64);
+    direction = point_direction(x, y, 128, 64);
+    speed = 5;
 }
 </string>
           </argument>

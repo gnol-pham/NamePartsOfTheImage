@@ -25,29 +25,50 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ( o_ordinator.part[| 0] == 0){
+            <string>//gọi tên từng bộ phận kèm theo hiệu ứng nhấp nháy
+if ( o_ordinator.part[| 0] == 0){
     audio_stop_sound(ss_put_leaf);
     audio_play_sound(ss_put_leaf, 1, false);
+    with (o_leaf_blink){
+        instance_destroy()
+    }
+    instance_create(576, 161, o_leaf_blink);    
 }
 
 else if ( o_ordinator.part[| 0] == 1){
     audio_stop_sound(ss_put_root);
     audio_play_sound(ss_put_root, 1, false);
+    with (o_root_blink){
+        instance_destroy()
+    }
+    instance_create(646, 563, o_root_blink);
 }
 
 else if ( o_ordinator.part[| 0] == 2){
     audio_stop_sound(ss_put_stem);
     audio_play_sound(ss_put_stem, 1, false);
+    with (o_stem_blink){
+        instance_destroy()
+    }
+    instance_create(652, 470, o_stem_blink);
 }
 
 else if ( o_ordinator.part[| 0] == 3){
     audio_stop_sound(ss_put_flower);
     audio_play_sound(ss_put_flower, 1, false);
+    with (o_flower_blink){
+        instance_destroy()
+    }
+    instance_create(666, 204, o_flower_blink);
 }
 
 else if ( o_ordinator.part[| 0] == 4){
     audio_stop_sound(ss_put_fruit);
     audio_play_sound(ss_put_fruit, 1, false);
+    with (o_fruit_blink){
+        instance_destroy()
+    }
+    instance_create(530, 319, o_fruit_blink);
 }
 </string>
           </argument>
