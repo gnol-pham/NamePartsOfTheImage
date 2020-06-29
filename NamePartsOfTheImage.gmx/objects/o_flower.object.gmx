@@ -80,6 +80,10 @@
     x = mouse_x;
     y = mouse_y;
 }
+if (point_distance(x, y, o_flower_box.x, o_flower_box.y) &lt; 1  //trở về vị trí ban đầu hoặc vào giữa ô
+        || point_distance(x, y, 608, 64) &lt; 3){
+    speed = 0;
+}
 </string>
           </argument>
         </arguments>
@@ -102,33 +106,22 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_meeting(x, y, o_flower_box)){
+            <string>//kiểm tra các hành động sau khi thả chuột
+if (place_meeting(x, y, o_flower_box)){
     check_flower = 1;
     grab = 0;
-    with (o_flower_blink){
+    with (o_flower_blink){    //xóa hiệu ứng nhấp nháy
         instance_destroy();
     }
-    //move_towards_point(o_leaf_box.x, o_leaf_box.y, 5);
-    action_move_to(o_flower_box.x, o_flower_box.y);
-    //if (distance_to_object(o_leaf_box) &gt; 0){
-    //    direction = point_direction(x, y, o_leaf_box.x, o_leaf_box.y);
-    //   speed = 5;
-    //}
-    //else {
-    //    speed = 0;
-    //}
+    direction = point_direction(x, y, o_flower_box.x, o_flower_box.y);
+    speed = 2;
 }
 else {
+    audio_stop_sound(ss_wrong);
+    audio_play_sound(ss_wrong, 1, false);
     grab = 0;
-    //move_towards_point(128, 48, 10);
-    action_move_to(608, 64);
-   //if (distance_to_point(112, 48) &gt; 0){
-    //    direction = point_direction(x, y, 112, 48);
-    //    speed = 5;
-   // }
-   // else {
-    //    speed = 0;
-   // }
+    direction = point_direction(x, y, 608, 64);
+    speed = 5;
 }
 </string>
           </argument>

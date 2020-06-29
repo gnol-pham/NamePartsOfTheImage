@@ -80,8 +80,8 @@
     x = mouse_x;
     y = mouse_y;
 }
-if (point_distance(x, y, o_leaf_box.x, o_leaf_box.y) &lt; 2 
-        || point_distance(x, y, 128, 64) &lt; 2){
+if (point_distance(x, y, o_leaf_box.x, o_leaf_box.y) &lt; 1  //trở về vị trí ban đầu hoặc vào giữa ô
+        || point_distance(x, y, 128, 64) &lt; 3){
     speed = 0;
 }
 
@@ -107,19 +107,20 @@ if (point_distance(x, y, o_leaf_box.x, o_leaf_box.y) &lt; 2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_meeting(x, y, o_leaf_box)){
+            <string>//kiểm tra các hành động sau khi thả chuột
+if (place_meeting(x, y, o_leaf_box)){
     check_leaf = 1;
     grab = 0;
-    with (o_leaf_blink){
+    with (o_leaf_blink){    //xóa hiệu ứng nhấp nháy
         instance_destroy();
     }
-    //action_move_to(o_leaf_box.x, o_leaf_box.y);
     direction = point_direction(x, y, o_leaf_box.x, o_leaf_box.y);
-    speed = 5;
+    speed = 2;
 }
 else {
+    audio_stop_sound(ss_wrong);
+    audio_play_sound(ss_wrong, 1, false);
     grab = 0;
-    //action_move_to(128, 64);
     direction = point_direction(x, y, 128, 64);
     speed = 5;
 }
