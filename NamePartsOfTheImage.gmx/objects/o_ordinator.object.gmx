@@ -355,6 +355,34 @@ else if (part[| 0] == 4)
     <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
+        <id>514</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_text</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>2</kind>
+            <string>Score: </string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>815</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>11</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>613</id>
         <kind>0</kind>
         <userelative>-1</userelative>
@@ -369,11 +397,11 @@ else if (part[| 0] == 4)
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>part[| 0]</string>
+            <string>progress * 100</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>11</string>
+            <string>880</string>
           </argument>
           <argument>
             <kind>0</kind>

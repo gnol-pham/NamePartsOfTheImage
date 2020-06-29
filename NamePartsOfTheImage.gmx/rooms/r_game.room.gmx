@@ -56,11 +56,11 @@
     <instance objName="o_stem" x="448" y="64" name="inst_3EC8E737" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_fruit" x="768" y="64" name="inst_04FF8F1C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_flower" x="608" y="64" name="inst_BE6432C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_leaf_box" x="434" y="172" name="inst_14551E15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_root_box" x="446" y="554" name="inst_7D35FC2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_stem_box" x="795" y="451" name="inst_74577913" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_flower_box" x="835" y="201" name="inst_FD066D2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_fruit_box" x="378" y="324" name="inst_AF096E32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_leaf_box" x="442" y="170" name="inst_14551E15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_root_box" x="450" y="555" name="inst_7D35FC2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_stem_box" x="788" y="453" name="inst_74577913" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_flower_box" x="792" y="198" name="inst_FD066D2C" locked="0" code="" scaleX="0.961038947105408" scaleY="0.960784316062927" colour="4294967295" rotation="0"/>
+    <instance objName="o_fruit_box" x="385" y="322" name="inst_AF096E32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_ordinator" x="864" y="512" name="inst_E7B7AF94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_tree" x="648" y="354" name="inst_0D7B1F13" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_speaker" x="129" y="489" name="inst_72297045" locked="0" code="" scaleX="1.1484375" scaleY="1.09947645664215" colour="4294967295" rotation="0"/>

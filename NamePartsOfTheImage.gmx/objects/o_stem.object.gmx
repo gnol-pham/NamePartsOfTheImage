@@ -80,8 +80,8 @@
     x = mouse_x;
     y = mouse_y;
 }
-if (point_distance(x, y, o_stem_box.x, o_stem_box.y) &lt; 1  //trở về vị trí ban đầu hoặc vào giữa ô
-        || point_distance(x, y, 448, 64) &lt; 3){
+if (point_distance(x, y, o_stem_box.x, o_stem_box.y) &lt; 5  //trở về vị trí ban đầu hoặc vào giữa ô
+        || point_distance(x, y, 448, 64) &lt; 5){
     speed = 0;
 }
 </string>
@@ -192,6 +192,30 @@ else {
           <argument>
             <kind>0</kind>
             <string>1</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>depth</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>-1111</string>
           </argument>
         </arguments>
       </action>
