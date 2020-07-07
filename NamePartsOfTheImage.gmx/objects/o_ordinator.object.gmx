@@ -373,11 +373,11 @@ else if (part[| 0] == 4)
           </argument>
           <argument>
             <kind>0</kind>
-            <string>815</string>
+            <string>835</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>11</string>
+            <string>9</string>
           </argument>
         </arguments>
       </action>
@@ -401,11 +401,35 @@ else if (part[| 0] == 4)
           </argument>
           <argument>
             <kind>0</kind>
-            <string>880</string>
+            <string>890</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>11</string>
+            <string>9</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>526</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_font</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>12</kind>
+            <font>f_score</font>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
           </argument>
         </arguments>
       </action>

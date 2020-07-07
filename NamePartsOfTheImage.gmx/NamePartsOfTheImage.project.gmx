@@ -56,6 +56,9 @@
     <background>background\bg_menu</background>
   </backgrounds>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\f_score</font>
+  </fonts>
   <objects name="objects">
     <object>objects\o_leaf</object>
     <object>objects\o_root</object>
